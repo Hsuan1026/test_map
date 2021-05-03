@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="map_all.css" type="text/css">
     <title>map_test</title>
+    
 </head>
 <body>
     <div id="map"></div>
@@ -13,9 +14,38 @@
     <button id="1" class="target">1</button>
     <button id="2" class="target">2</button>
     <button id="3" class="target">3</button>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnroImRbilgj-vcxJR47R4wrh6suZw0D4&callback=initMap" async defer></script>
+    <script src="API_KEY.js"></script>
+    <!-- <script type="text/javascript" src="map_apikey.json"></script> -->
+    <script>
+        // var requestUrl = "map_apikey.json";
+        // var json = $.getJSON("map_apikey.json");
+        // $.get("./map_apikey.json",function(json){
+        //     var keyfile = JSON.stringify(json);
+        //     console.log(keyfile);
+        // })
+        
+        // var keyfile = JSON.parse('{ "api-key":"AIzaSyCnroImRbilgj-vcxJR47R4wrh6suZw0D4" }');
+        // var key = Object.values(keyfile)[0];
+        // console.log(`https://maps.googleapis.com/maps/api/js?key=${key}&callback=initMap`);
+    </script>
+    <!-- <script>
+        $(document).ready(function(){
+            $.getJSON("map_apikey.json", function(data){
+                console.log(data); // Prints: Harry
+                // console.log(data.age); // Prints: 14
+            }).fail(function(){
+                console.log("An error has occurred.");
+            });
+        });
+    </script>  -->
+    <script type="text/javascript">
+        var mappath = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&callback=initMap`;
+        document.write('<scr' + 'ipt src="' + mappath + '" async defer></scr' + 'ipt>');
+    </script>
+    <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCnroImRbilgj-vcxJR47R4wrh6suZw0D4&map_ids=892f444c9eaa9e2&callback=initMap" async defer></script> -->
     <script src="map_js.js"></script>
 </body>
 </html>

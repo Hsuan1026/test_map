@@ -8,6 +8,7 @@ var Markers=[];
 var Infowindows=[];
 var count = -1;
 function initMap() {
+    
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 17,
       maxZoom: 22,
@@ -18,6 +19,7 @@ function initMap() {
       fullscreenControl: false,
       zoomControl: false
     });
+    // marker.setMap(null);
     map.addListener('click', function(event){
         addMarker(event.latLng);
         
